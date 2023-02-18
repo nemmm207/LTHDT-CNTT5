@@ -1,0 +1,58 @@
+import java.util.Scanner;
+
+public class Menu {
+
+    public static void main(String[] args) {
+        int chucNang;
+        Scanner sc = new Scanner(System.in);
+
+        do {
+            menu();
+            System.out.print("Chọn chức năng: ");
+            chucNang = sc.nextInt();
+
+            switch (chucNang) {
+                case 1:
+                    giaiPTB1();
+                    break;
+                case 2:
+                    giaiPTB2();
+                    break;
+                case 3:
+                    tinhTienDien();
+                    break;
+                case 4:
+                    System.out.println("Kết thúc chương trình");
+                    break;
+                default:
+                    System.out.println("Chức năng không hợp lệ. Vui lòng chọn lại!");
+                    break;
+            }
+        } while (chucNang != 4);
+    }
+
+    public static void menu() {
+        System.out.println("+---------------------------------------------------+");
+        System.out.println("1. Giải phương trình bậc nhất");
+        System.out.println("2. Giải phương trình bậc 2");
+        System.out.println("3. Tính tiền điện");
+        System.out.println("4. Kết thúc");
+        System.out.println("+---------------------------------------------------+");
+    }
+
+    public static void giaiPTB1() {
+        // Chứa mã của bài giải phương trình bậc nhất
+        System.out.println("Bạn chọn chức năng giải phương trình bậc nhất");
+    }
+
+    public static void giaiPTB2() {
+        // Chứa mã của bài giải phương trình bậc hai
+        System.out.println("Bạn chọn chức năng giải phương trình bậc hai");
+    }
+
+    public static void tinhTienDien() {
+        // Chứa mã của bài tính tiền điện
+        System.out.println("Bạn chọn chức năng tính tiền điện");
+    }
+
+}
